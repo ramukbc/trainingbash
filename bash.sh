@@ -1,4 +1,9 @@
 #!/bin/bash
+
+for ip in `cat host.txt`
+do
+ssh vagrant@$ip
+ 
 echo check the os version is it ubuntu or linux,centos
 echo checking....
 lsb_release -a >> file30.txt
@@ -24,6 +29,6 @@ else
 echo your os versin is centos
 echo you can use yum for installing the packages.
 fi
-
+done
 
   
